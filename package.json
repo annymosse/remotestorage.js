@@ -14,6 +14,7 @@
   "scripts": {
     "test": "bash scripts/test-all.sh",
     "lint": "eslint --quiet src/",
+    "format": "esformatter --config esformatter-config.json -i src/sync.js",
     "build": "NODE_ENV=production webpack --mode=production",
     "dev": "webpack -w --mode=development",
     "doc": "cd doc; sphinx-autobuild -i '*~' -i '*.sw*' -i '#*#' . _build/html",
@@ -28,6 +29,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "babel-loader": "^8.0.4",
+    "esformatter": "^0.10.0",
     "eslint": "^5.9.0",
     "jaribu": "^2.2.1",
     "webpack": "^4.25.1",
